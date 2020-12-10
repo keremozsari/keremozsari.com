@@ -7,3 +7,56 @@
         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     }
 }
+@media (min-width: 320px) and (max-width: 374px){
+    html{
+        font-size: 12px;
+    }
+    .about-detail {
+        left: 10%;
+        top: 5%;
+        width: 75%;
+        position: relative;
+        color: #fff;
+    }
+    .about-detail p{
+        font-size: .8rem;
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 425px) {
+    html {
+        font-size: 12px;
+    }
+
+    .about-detail {
+        left: 10%;
+        top: 5%;
+        width: 75%;
+        position: relative;
+        color: #fff;
+    }
+
+    .about-detail p {
+        font-size: .9rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 600px){
+    html {
+        font-size: 13px;
+    }
+    .about-detail p {
+        font-size: .9rem;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 992px){
+    html {
+        font-size: 15px;
+    }
+    .about-detail p {
+        font-size: .9rem;
+    }
+}

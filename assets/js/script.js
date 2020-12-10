@@ -49,9 +49,6 @@ replayBtn.addEventListener('click', () => {
 });
 
 function preset(){
-    // For masking, initial opacity (0), must be set by JS
-    // If it is set by CSS the JS cannot override.
-    // I know - feels wrong, but there we are
     gsap.set(['#n1_1','#n1_1_2',
         '#n1_2','#n1_2_2','#n1_2_3',
         '#n1_3','#n1_3_2',
@@ -70,8 +67,6 @@ function preset(){
 }
 
 function runSequence(){
-    /*	Kick off times for each row.
-        To delay the start, just change 'time_row1' */
     time_row1 = .5;
     time_row2 = time_row1 + .95;
     time_row3 = time_row1 + .8;
