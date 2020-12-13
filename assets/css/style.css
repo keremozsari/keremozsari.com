@@ -12,7 +12,6 @@ ul li {
     list-style: none;
 }
 
-
 /** (: ***************************************
 Header Style
 **************************************** :) **/
@@ -52,7 +51,7 @@ Navigation
 }
 
 .overlay-slide-up {
-    transition: all .8s ease-in-out;
+    transition: all .5s ease-in-out;
     transform: translateY(-100%)
 }
 
@@ -98,7 +97,7 @@ Navigation
     height: 2px;
     background-color: #fff;
     position: absolute;
-    top: 50%;
+    top: 100%;
     left: 0;
     z-index: 100;
     transform: translateX(-100%);
@@ -163,23 +162,23 @@ Navigation
 }
 
 .slide-in-nav-item {
-    animation: slide-in-nav-item 0.4s linear 1 .2s both;
+    animation: slide-in-nav-item 0.4s linear 1 .1s both;
 }
 
 .slide-in-nav-item-delay-1 {
-    animation: slide-in-nav-item 0.4s linear 1 .4s both;
+    animation: slide-in-nav-item 0.4s linear 1 .2s both;
 }
 
 .slide-in-nav-item-delay-2 {
-    animation: slide-in-nav-item 0.4s linear 1 .6s both;
+    animation: slide-in-nav-item 0.4s linear 1 .3s both;
 }
 
 .slide-in-nav-item-delay-3 {
-    animation: slide-in-nav-item 0.4s linear 1 .8s both;
+    animation: slide-in-nav-item 0.4s linear 1 .4s both;
 }
 
 .slide-in-nav-item-delay-4 {
-    animation: slide-in-nav-item 0.4s linear 1 1s both;
+    animation: slide-in-nav-item 0.4s linear 1 .5s both;
 }
 
 .slide-in-nav-item-reverse {
@@ -201,7 +200,6 @@ Navigation
 .slide-in-nav-item-delay-4-reverse {
     animation: slide-in-nav-item-reverse .3s linear 1 both;
 }
-
 
 /** (: ***************************************
 Burger King
@@ -226,29 +224,28 @@ Burger King
 }
 
 .animate-top-bar {
-    animation: animate-top-bar .6s linear 1 both
+    animation: animate-top-bar .3s linear 1 both
 }
 
 .animate-bottom-bar {
-    animation: animate-bottom-bar .6s linear 1 both
+    animation: animate-bottom-bar .3s linear 1 both
 }
 
 .animate-middle-bar {
-    animation: animate-middle-bar .6s linear 1 both
+    animation: animate-middle-bar .3s linear 1 both
 }
 
 .animate-out-top-bar {
-    animation: animate-out-top-bar .6s linear 1 both
+    animation: animate-out-top-bar .3s linear 1 both
 }
 
 .animate-out-bottom-bar {
-    animation: animate-out-bottom-bar .6s linear 1 both
+    animation: animate-out-bottom-bar .3s linear 1 both
 }
 
 .animate-out-middle-bar {
-    animation: animate-out-middle-bar .6s linear 1 both
+    animation: animate-out-middle-bar .3s linear 1 both
 }
-
 
 /** (: ***************************************
 Animation keyframes
@@ -413,7 +410,9 @@ Animation keyframes
     }
 }
 
-/* footer */
+/** (: ***************************************
+Footer
+**************************************** :) **/
 
 footer{
     width: 100%;
@@ -429,22 +428,6 @@ footer h3{
     font-size: 2rem;
 }
 
-.social-jobs{
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-}
-
-.social-jobs a{
-    font-size: 4rem;
-    margin: 20px;
-    color: #fff;
-}
-
-.social-jobs a:hover{
-    opacity: .6;
-}
-
 footer p{
     margin-top: 40px;
     color: #fff;
@@ -452,12 +435,13 @@ footer p{
     font-size: 1.1rem;
 }
 
-
-/* ABOUT */
+/** (: ***************************************
+About
+**************************************** :) **/
 
 .about {
     width: 100%;
-    height: 1000px;
+    height: 750px;
     position: relative;
     background-image: url(../img/g34kal.jpg);
     background-size: cover;
@@ -471,6 +455,7 @@ footer p{
     position: relative;
     color: #fff;
 }
+
 .about-detail h2{
     text-align: center;
     margin: 20px;
@@ -481,264 +466,90 @@ blockquote{
     margin-top: 20px;
 }
 
+/** (: ***************************************
+Contact
+**************************************** :) **/
 
-/* contact */
-
-#contact {
+#contact{
     width: 100%;
-    height: 100vh;
-    background-color: #111;
-    overflow: hidden;
-    padding-bottom: 200px;
+    height: 750px;
 }
 
-.section-header {
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 50px;
-    margin-bottom: 50px;
-    font: 300 60px 'Oswald', sans-serif;
-    letter-spacing: 6px;
-    color: #fff;
-    margin-bottom: 25px;
+.contact-list{
+    width: 410px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-wrapper {
-    margin: 0 auto;
-    padding-top: 20px;
-    position: relative;
-    max-width: 800px;
-}
-
-/* Begin Left Contact Page */
-.form-horizontal {
-    float: left;
-    max-width: 400px;
-    font-family: 'Lato';
-    font-weight: 400;
-}
-
-.form-control, textarea {
-    max-width: 400px;
-    background-color: #111;
-    color: #fff;
-    letter-spacing: 1px;
-}
-
-.send-button {
-    margin-top: 15px;
-    height: 34px;
-    width: 400px;
-    overflow: hidden;
-    transition: all .2s ease-in-out;
-}
-
-.button {
+.list-item{
     width: 100%;
-    height: 34px;
-    transition: all .2s ease-in-out;
-}
-
-.send-text {
-    display: block;
-    margin-top: 10px;
-    font: 300 14px 'Lato', sans-serif;
-    letter-spacing: 2px;
-}
-
-.button:hover {
-    transform: translate3d(0px, -29px, 0px);
-}
-
-/* Begin Right Contact Page */
-.direct-contact-container {
-    max-width: 317px;
-    float: right;
-    margin-top: 5px;
-}
-
-/* Location, Phone, Email Section */
-.contact-list {
-    list-style-type: none;
-    margin-left: -12px;
-    padding-right: 20px;
-}
-
-.list-item {
-    line-height: 4;
-    color: #aaa;
-}
-
-.contact-text {
-    font: 300 18px 'Lato', sans-serif;
-    letter-spacing: 1.9px;
+    margin: 15px;
     color: #bbb;
 }
 
-.place {
+.list-item .place{
+    margin-left: 56px;
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: #bbb;
+}
+
+.list-item .phone a{
+    margin-left: 45px;
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: #bbb;
+}
+
+.list-item .gmail a{
     margin-left: 50px;
-    font-size: 1.4rem;
-}
-
-.phone {
-    margin-left: 43px;
-    font-size: 1.4rem;
-}
-
-.gmail {
-    margin-left: 42px;
-    font-size: 1.4rem;
-}
-
-.contact-text a {
+    font-size: 1.9rem;
+    text-decoration: none;
     color: #bbb;
-    text-decoration: none;
-    transition-duration: 0.2s;
 }
 
-.contact-text a:hover {
+.list-item .phone a:hover,
+.list-item .gmail a:hover{
     color: #fff;
-    text-decoration: none;
+    transition: color 2ms;
 }
 
-
-/* Social Media Icons */
-.social-media-list {
-    position: relative;
-    font-size: 2.3rem;
-    text-align: center;
-    width: 100%;
+.social-media-list{
+    width: 410px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.social-media-list li a {
-    color: #fff;
-}
-
-.social-media-list li {
-    position: relative;
-    top: 0;
-    left: -20px;
+.social-media-list li{
     display: inline-block;
-    height: 70px;
     width: 70px;
-    margin: 10px auto;
-    line-height: 70px;
-    border-radius: 50%;
-    color: #fff;
+    height: 70px;
     background-color: rgb(27,27,27);
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-
-.social-media-list li:after {
-    content: '';
-    position: absolute;
+    border-radius: 50% ;
+    position: relative;
     top: 0;
     left: 0;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    border-radius: 50%;
-    opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
-    transition: all .2s ease-in-out;
+    margin: 0 10px;
 }
 
-.social-media-list li:hover {
+.social-media-list li:hover{
     background-color: #fff;
+    border-radius: 50%;
 }
 
-.social-media-list li:hover:after {
-    opacity: 1;
-    transform: scale(1.12);
-    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
-}
-
-.social-media-list li:hover a {
+.social-media-list li:hover a{
     color: #111;
 }
 
-.copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: #555;
-    letter-spacing: 1px;
-    text-align: center;
+.contact-icon{
+    display: inline-block;
+    color: #fff;
+    font-size: 40px;
+    margin: 0 30px;
+    position: relative;
+    left: -19%;
+    top: 4%;
 }
 
-hr {
-    border-color: rgba(255,255,255,.8); ;
-}
-
-/* Begin Media Queries*/
-@media screen and (max-width: 760px) {
-    #contact {
-        height: 1000px;
-    }
-    .section-header {
-        font-size: 65px;
-    }
-    .direct-contact-container, .form-horizontal {
-        float: none;
-        margin: 10px auto;
-    }
-    .direct-contact-container {
-        margin-top: 60px;
-        max-width: 300px;
-    }
-    .social-media-list li {
-        height: 60px;
-        width: 60px;
-        line-height: 60px;
-    }
-    .social-media-list li:after {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-    }
-}
-
-@media screen and (max-width: 569px) {
-    #contact {
-        height: 1200px;
-    }
-    .section-header{
-        font-size: 50px;
-    }
-    .direct-contact-container, .form-wrapper {
-        float: none;
-        margin: 0 auto;
-    }
-    .form-control, textarea {
-        max-width: 340px;
-        margin: 0 auto;
-    }
-
-    .name, .email, textarea {
-        width: 280px;
-    }
-    .direct-contact-container {
-        margin-top: 60px;
-        max-width: 280px;
-    }
-    .social-media-list {
-        left: 0;
-    }
-    .social-media-list li {
-        height: 55px;
-        width: 55px;
-        line-height: 55px;
-        font-size: 2rem;
-    }
-    .social-media-list li:after {
-        width: 55px;
-        height: 55px;
-        line-height: 55px;
-    }
-
-}
-
-@media screen and (max-width: 410px) {
-    .send-button {
-        width: 99%;
-    }
-}

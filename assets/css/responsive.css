@@ -7,10 +7,12 @@
         filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
     }
 }
+
 @media (min-width: 320px) and (max-width: 374px){
     html{
         font-size: 12px;
     }
+
     .about-detail {
         left: 10%;
         top: 5%;
@@ -18,11 +20,46 @@
         position: relative;
         color: #fff;
     }
+
     .about-detail p{
         font-size: .8rem;
     }
-}
 
+    .list-item .place{
+        margin-left: 51px;
+        font-size: 1.5rem;
+    }
+
+    .list-item .phone a{
+        font-size: 1.5rem;
+    }
+
+    .list-item .gmail a{
+        font-size: 1.5rem;
+    }
+
+    .social-media-list li {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        background-color: rgb(27,27,27);
+        border-radius: 50%;
+        position: relative;
+        top: 0;
+        left: 0px;
+        margin: 0 10px;
+    }
+
+    .contact-icon {
+        display: inline-block;
+        color: #fff;
+        font-size: 28px;
+        margin: 0 30px;
+        position: relative;
+        left: -28%;
+        top: 11%;
+    }
+}
 
 @media (min-width: 375px) and (max-width: 425px) {
     html {
@@ -40,6 +77,32 @@
     .about-detail p {
         font-size: .9rem;
     }
+
+    .contact-list{
+        font-size: .9rem;
+    }
+
+    .social-media-list li{
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(27,27,27);
+        border-radius: 50% ;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 10px;
+    }
+
+    .contact-icon{
+        display: inline-block;
+        color: #fff;
+        font-size: 30px;
+        margin: 0 30px;
+        position: relative;
+        left: -22%;
+        top: 12%;
+    }
 }
 
 @media (min-width: 426px) and (max-width: 600px){
@@ -51,7 +114,6 @@
     }
 }
 
-
 @media (min-width: 601px) and (max-width: 992px){
     html {
         font-size: 15px;
@@ -61,3 +123,4 @@
     }
 }
 
+@media (max-width: )
