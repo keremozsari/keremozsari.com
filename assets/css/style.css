@@ -12,31 +12,48 @@ ul li {
     list-style: none;
 }
 
-/** (: ***************************************
-Header Style
-**************************************** :) **/
+/*************** Header Style ***************/
 
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 body {
-    background-color: #000000 !important;
+    overflow: hidden;
 }
 
-.home {
+.topbar{
+    width: 100%;
+}
+
+#vanta-canvas{
     width: 100%;
     height: 100vh;
-    position: relative;
-    background-image: url(../img/photo-1446771326090-d910bfaf00f6.jpg);
-    background-size: cover;
-    background-position: center center;
 }
 
-/** (: ***************************************
-Navigation
-**************************************** :) **/
+.social-area{
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 44%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.social-area a{
+    color: #fff;
+    margin: 2px;
+    font-size: 20px;
+}
+
+.social-area a:hover{
+    color: #fff;
+    opacity: .8;
+}
+
+/*************** Navigation ***************/
 
 .overlay-navigation {
     position: fixed;
-    z-index: 99;
+    z-index: 1;
     top: 0;
     left: 0;
     width: 100%;
@@ -69,7 +86,7 @@ Navigation
 }
 
 .navigation ul li {
-    flex-basis: 20%;
+    flex-basis: 25%;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -201,9 +218,7 @@ Navigation
     animation: slide-in-nav-item-reverse .3s linear 1 both;
 }
 
-/** (: ***************************************
-Burger King
-**************************************** :) **/
+/*************** Burger King ***************/
 
 .open-overlay {
     position: absolute;
@@ -247,9 +262,7 @@ Burger King
     animation: animate-out-middle-bar .3s linear 1 both
 }
 
-/** (: ***************************************
-Animation keyframes
-**************************************** :) **/
+/*************** Animation Keyframes ***************/
 
 @keyframes slide-in-nav-item {
     from {
@@ -410,55 +423,26 @@ Animation keyframes
     }
 }
 
-/** (: ***************************************
-Footer
-**************************************** :) **/
-
-footer{
-    width: 100%;
-    height: 350px;
-    background-image: url(../img/footer-background-01.jpg);
-    background-size: cover;
-}
-
-footer h3{
-    text-align: center;
-    color: #fff;
-    padding-top: 60px;
-    font-size: 2rem;
-}
-
-footer p{
-    margin-top: 40px;
-    color: #fff;
-    text-align: center;
-    font-size: 1.1rem;
-}
-
-/** (: ***************************************
-About
-**************************************** :) **/
+/*************** About ***************/
 
 .about {
     width: 100%;
-    height: 750px;
-    position: relative;
-    background-image: url(../img/g34kal.jpg);
-    background-size: cover;
-    background-position: center center;
+    position: absolute;
+    top: 10%;
+    font-family: "Poppins";
 }
 
 .about-detail{
-    left: 10%;
+    left: 18%;
     top: 10%;
-    width: 75%;
+    width: 100%;
     position: relative;
     color: #fff;
 }
 
 .about-detail h2{
     text-align: center;
-    margin: 20px;
+    margin: 10px;
 }
 
 blockquote{
@@ -466,90 +450,171 @@ blockquote{
     margin-top: 20px;
 }
 
-/** (: ***************************************
-Contact
-**************************************** :) **/
+/* Homepage description */ 
 
-#contact{
+.homepage-description {
     width: 100%;
-    height: 750px;
-}
-
-.contact-list{
-    width: 410px;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.list-item{
-    width: 100%;
-    margin: 15px;
-    color: #bbb;
-}
-
-.list-item .place{
-    margin-left: 56px;
-    font-size: 1.9rem;
-    text-decoration: none;
-    color: #bbb;
-}
-
-.list-item .phone a{
-    margin-left: 45px;
-    font-size: 1.9rem;
-    text-decoration: none;
-    color: #bbb;
-}
-
-.list-item .gmail a{
-    margin-left: 50px;
-    font-size: 1.9rem;
-    text-decoration: none;
-    color: #bbb;
-}
-
-.list-item .phone a:hover,
-.list-item .gmail a:hover{
-    color: #fff;
-    transition: color 2ms;
-}
-
-.social-media-list{
-    width: 410px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.social-media-list li{
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-    background-color: rgb(27,27,27);
-    border-radius: 50% ;
+    height: 100vh;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+  }
+  .homepage-description .box {
+    width: 250px;
+    height: 250px;
     position: relative;
-    top: 0;
-    left: 0;
-    margin: 0 10px;
-}
-
-.social-media-list li:hover{
-    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .homepage-description .box .title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  .homepage-description .box .title .block {
+    width: 0%;
+    height: inherit;
+    background: #ffb510;
+    position: absolute;
+    animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    display: flex;
+  }
+  .homepage-description .box .title .text-name {
+    font-family: "Poppins";
+    color: #fff;
+    font-size: 32px;
+    -webkit-animation: mainFadeIn 2s forwards;
+    -o-animation: mainFadeIn 2s forwards;
+    animation: mainFadeIn 2s forwards;
+    animation-delay: 1.6s;
+    opacity: 0;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+  }
+  .homepage-description .box .title .text-name span {
+    width: 0px;
+    height: 0px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border-radius: 50%;
-}
-
-.social-media-list li:hover a{
-    color: #111;
-}
-
-.contact-icon{
-    display: inline-block;
-    color: #fff;
-    font-size: 40px;
-    margin: 0 30px;
+    background: #ffb510;
+    -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 2s;
+    margin-left: 5px;
+    margin-top: -10px;
+    position: absolute;
+    bottom: 13px;
+    right: -12px;
+  }
+  .homepage-description .box .role {
+    width: 100%;
     position: relative;
-    left: -19%;
-    top: 4%;
-}
-
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: -10px;
+  }
+  .homepage-description .box .role .block {
+    width: 0%;
+    height: inherit;
+    background: #e91e63;
+    position: absolute;
+    animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+    animation-delay: 2s;
+    display: flex;
+  }
+  .homepage-description .box .role .text-job {
+    animation: secFadeIn 2s forwards;
+    animation-delay: 3.2s;
+    opacity: 0;
+    font-weight: 400;
+    font-family: "Lato";
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  
+  @keyframes mainBlock {
+    0% {
+      width: 0%;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  @keyframes secBlock {
+    0% {
+      width: 0%;
+      left: 0;
+    }
+    50% {
+      width: 100%;
+      left: 0;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  @keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #e9d856;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 10px;
+      height: 10px;
+      background: #e9d856;
+      opacity: 1;
+      bottom: 45px;
+    }
+    65% {
+      width: 7px;
+      height: 7px;
+      bottom: 0px;
+      width: 15px;
+    }
+    80% {
+      width: 10px;
+      height: 10px;
+      bottom: 20px;
+    }
+    100% {
+      width: 7px;
+      height: 7px;
+      background: #e9d856;
+      border: 0px solid #222;
+      bottom: 13px;
+    }
+  }
+  @keyframes secFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }

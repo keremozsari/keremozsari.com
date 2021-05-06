@@ -1,72 +1,91 @@
 <!doctype html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Css -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <!--Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <title>Kerem Özsarı</title>
 </head>
+
 <body>
-<div class="overlay-navigation">
-    <nav class="navigation" role="navigation">
-        <ul>
-            <li><a href="./index.html" >Anasayfa</a></li>
-            <li><a href="./about.html" >Hakkımda</a></li>
-            <li><a href="./work.html" >Work</a></li>
-            <li><a href="./blog.html" >Blog</a></li>
-            <li><a href="./contact.html" >Contact</a></li>
-        </ul>
-    </nav>
-</div>
+    <div id="vanta-canvas"></div>
 
-<section class="about">
-    <div class="open-overlay">
-        <span class="bar-top"></span>
-        <span class="bar-middle"></span>
-        <span class="bar-bottom"></span>
+    <div class="overlay-navigation">
+        <nav class="navigation" role="navigation">
+            <ul>
+                <li><a href="./index.html">Anasayfa</a></li>
+                <li><a href="./about.html">Hakkımda</a></li>
+                <li><a href="./work.html">Work</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="about-detail">
-        <h2>Hakkımda</h2>
-        <p>Merhaba, ben Kerem. 18.10.1994 tarihinde İstanbul'da doğdum. Doğduğumdan beri İstanbul'da yaşıyorum. Aslen Rize'liyim.
-            <br><br>
-            Okul hayatıma 1. sınıfta Sait Çiftçi İlköğretim Okulunda başladım. 2. sınıftan itibaren ise Beyoğlu Namık Kemal İlköğretim Okulunda okudum. Lise hayatıma Maçka Akif Tunçel'de başlasamda, lise 2. sınıfta Kabataş Ticaret Meslek Lisesine geçtim. Mezun olduktan sonra Marmara Üniversitesi Dış Ticaret (Uzaktan Eğitim) bölümüne girdim. Ancak yıllar içerisinde iş, futbol gibi nedenlerden dolayı okulu aksattım ve bitiremedim. Ardından kaydımı sildirerek yeniden sınava girdim. Şuanda Anadolu Üniversitesi Spor Yönetimi okuyorum.
-            <br><br>
-            Meslek hayatıma çağrı merkezlerinde çalışarak başladım. Ardından garsonluk ve komilik yaparak devam ettim. Daha sonra Ağustos 2014'te Aikido salonunda eğitmen yardımcısı olarak işe başladım. 6 ay süren bu serüven sonunda, Şubat 2015 ve Eylül 2020 tarihleri arasında Europ Assistance firmasında, sigorta hasar uzman yardımcısı olarak çalıştım. 2020 yılının başlarında meslek değiştirmeye karar verdim ve yazılım öğrenmeye başladım. Ekim 2020 tarihinde Nacar Medya firmasında frontend developer olarak işe başladım. Ancak maddi problemler nedeniyle 2 ay çalışabildim.
-            <br><br>
-            Şuanda Udemy üzerinden Html, Css, Bootstrap 4, Javascript, SQL eğitimlerime devam ediyorum. Kendimi 2 aylık çalışma sürecinde epey geliştirdim. Özellikle git kullanımı, yazılım ekibinde çalışma şekli ile ilgili bir çok bilgiye hakim oldum. Amacım iyi bir frontend ekibi içerisinde yer alarak kendimi daha da geliştirmek.
-            <br><br>
-            Gördüğünde gibi hayatta yeni bir sayfa açmak için hiç bir zaman geç değil. Nefes aldığımız sürece hayatımızı iyileştirebilir, gelecek için güzel işler başarabiliriz. Bu yüzden sürekli çalışmalı ve asla pes etmemeliyiz.
-            <blockquote>"Gelecek Çalışkan Olanlarındır." Mustafa Kemal Atatürk</blockquote></p>
+    <div class="topbar">
+        <div class="social-area mt-3">
+            <a href="https://www.linkedin.com/in/keremozsari/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/keremozsari" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://twitter.com/OzsariKerem" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.instagram.com/ozsarikerem/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </div>
+        <div class="open-overlay">
+            <span class="bar-top"></span>
+            <span class="bar-middle"></span>
+            <span class="bar-bottom"></span>
+        </div>
     </div>
+    <section class="container about">
+        <div class="about-detail">
+            <h2>Hakkımda</h2>
+            <p>Merhaba, Ben Kerem. İstanbul'da ikamet eden bir Ön Uç Geliştiriciyim. Html, css, bootstrap, jquery ve javascript kullanıyorum. 1 buçuk yıl önce Udemy platformundan kurs alarak bu mesleğe atılmaya karar verdim. Bildiğim teknolojiler dışında; React, Vue gibi kütüphanelerde kendimi geliştirmeyi hedefliyorum. React Native ile de mobil alanda geliştirme yapmak istiyorum.
+            <br><br>
+            Özel hayatımda müzikle ve sporla yakından ilgiliyim. Amatör lisanslı bir futbol oyuncusuyum. Motorsiklet kullanmayı seviyorum. İnsanlar ile iletişimim güçlü ve karşı tarafa her zaman sıcak kanlı davranan birisiyim. Bu nedenle iletişim kurarken zorluk çekmiyorum. Takım oyuncusu olmam iş hayatımdaki takım çalışmalarında başarılı olmamı sağlıyor.
+            <br><br>
+            Şuanda tam zamanlı iş tekliflerine açığım. Ayrıca freelance olarak kısa süreli işlerde almaktayım. 
+            <br><br>
+            </p>
 
-</section>
-<footer>
-    <h3>Designed by keremozsari</h3>
-    <ul class="social-media-list">
-        <li><a href="https://github.com/keremozsari" class="contact-icon" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-        <li><a href="https://twitter.com/OzsariKerem" class="contact-icon" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/ozsarikerem" class="contact-icon" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/keremozsari" class="contact-icon" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-    </ul>
-    <p>keremozsari © 2020</p>
-</footer>
+            <h2>About Me</h2>
+            <p>Hello, I'm Kerem. I am a Front End Developer based in Istanbul. I use html, css, bootstrap, jquery and javascript. 1 and a half years ago, I decided to start this profession by taking a course on the Udemy platform. Apart from the technologies I know; I aim to improve myself in libraries such as React and Vue. I want to develop in mobile space with React Native.
+            <br><br>
+            I am closely interested in music and sports in my private life. I am an amateur licensed football player. I like to ride a motorcycle. My communication with people is strong and I am always a warm-blooded person. Therefore, I have no difficulty communicating. Being a team player enables me to be successful in teamwork in my business life.
+            <br><br>
+            I am currently open to full time job offers. I also take short-term jobs as a freelancer.
+            <br><br>
+            </p>
+        </div>
+    </section>
 
-<script src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="./assets/plugins/jquery/jquery-3.5.1.min.js"></script>
-<script src="./assets/plugins/js/gsap.min.js"></script>
-<script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.topology.min.js"></script>
+    <script>
+        VANTA.TOPOLOGY({
+            el: "#vanta-canvas",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x964444,
+            backgroundColor: 0x161616
+        })
+    </script>
 
 </body>
+
 </html>
