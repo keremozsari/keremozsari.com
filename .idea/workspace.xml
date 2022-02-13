@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="225c5fe8-32f5-4111-81f4-246d0a3ae833" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/.idea/pixelplus.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/src/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/src/img/1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/src/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/src/js/postData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/json-api/src/scss/style.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +47,10 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -48,12 +68,23 @@
       <workItem from="1607607426582" duration="12089000" />
       <workItem from="1607684474313" duration="5312000" />
       <workItem from="1607864695402" duration="11695000" />
-      <workItem from="1644761623928" duration="62000" />
+      <workItem from="1644761623928" duration="1124000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="1223" y="247" key="FileChooserDialogImpl" timestamp="1607523214392">
