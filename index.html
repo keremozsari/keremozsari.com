@@ -1,84 +1,147 @@
-<!doctype html>
-<html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-
-    <!--Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-    <title>Kerem Özsarı</title>
-</head>
-
-<body>
-    <div id="vanta-canvas"></div>
-
-    <div class="overlay-navigation">
-        <nav class="navigation" role="navigation">
-            <ul>
-                <li><a href="./index.html">Anasayfa</a></li>
-                <li><a href="./about.html">Hakkımda</a></li>
-                <li><a href="./work.html">Work</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="topbar">
-        <div class="social-area mt-3">
-            <a href="https://www.linkedin.com/in/keremozsari/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/keremozsari" target="_blank"><i class="fab fa-github-square"></i></a>
-            <a href="https://twitter.com/OzsariKerem" target="_blank"><i class="fab fa-twitter-square"></i></a>
-            <a href="https://www.instagram.com/ozsarikerem/" target="_blank"><i class="fab fa-instagram-square"></i></a>
-        </div>
-        <div class="open-overlay">
-            <span class="bar-top"></span>
-            <span class="bar-middle"></span>
-            <span class="bar-bottom"></span>
-        </div>
-    </div>
-
-    <div class="homepage-description">
-        <div class="box">
-            <div class="title">
-                <span class="block"></span>
-                <h1 class="text-name">Kerem Özsarı<span></span></h1>
+@@include('./header.html')
+<div>
+    <!-- Content -->
+    <section id="homePage">
+        <div class="homepage">
+            <div class="homepage__left">
+                <video autoplay muted loop class="homepage__left__video">
+                    <source src="./video/video1.mp4" type="video/mp4">
+                </video>
             </div>
-            <div class="role">
-                <div class="block"></div>
-                <p class="text-job">Frontend Developer</p>
+            <div class="homepage__desc">
+                <div class="homepage__desc__content">
+                    <div class="homepage__desc__content__title">
+                        <span class="homepage__desc__content__title__block"></span>
+                        <h1 class="homepage__desc__content__title__text">
+                            Kerem Ozsarı
+                            <span class="popIn"></span>
+                            <span class="popIn2"></span>
+                        </h1>
+                    </div>
+                    <div class="homepage__desc__content__role">
+                        <div class="homepage__desc__content__role__block"></div>
+                        <p class="homepage__desc__content__role__text">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="homepage__right">
+                <video autoplay muted loop class="homepage__right__video">
+                    <source src="./video/video2.mp4">
+                </video>
             </div>
         </div>
-    </div>
-    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.21/vanta.topology.min.js"></script>
-    <script>
-        VANTA.TOPOLOGY({
-            el: "#vanta-canvas",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x964444,
-            backgroundColor: 0x161616
-        })
-    </script>
+    <section id="about">
+        <h2 class="text-center">About Me</h2>
+        <div class="container-lg">
+            <div class="about">
+                <div class="about__content">
+                    <h2 class="about__content__title">My, Myself</h2>
+                    <p class="about__content__text">
+                        I’m a Front-End Developer located in Turkey. I have a serious passion for UI effects, animations and creating intuitive, dynamic user experiences.
+                        Well-organised person, problem solver, employee with high attention to detail. Fan of sport, outdoor activities, internet series and music.
+                        Interested in the entire frontend spectrum and working on ambitious projects with positive people.
+                    </p>
+                </div>
+                <div class="about__image">
+                    <img class="about__image__img" src="./img/kerem.jpg" alt="kerem-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="video">
+            <video autoplay muted loop class="video__play">
+                <source src="./video/light.mp4" type="video/mp4">
+            </video>
+        </div>
+        <h2 class="text-center text-white">Skills</h2>
+        <div class="container-lg">
+            <div class="skills">
+                <div class="skills__card">
+                    <img src="./img/html.png" alt="html" class="skills__card__img">
+                    <div class="skills__card__text">HTML</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/css.png" alt="css" class="skills__card__img">
+                    <div class="skills__card__text">CSS</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/bootstrap.png" alt="bootstrap" class="skills__card__img">
+                    <div class="skills__card__text">BOOTSTRAP</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/js.png" alt="js" class="skills__card__img">
+                    <div class="skills__card__text">JAVASCRIPT</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/jquery.png" alt="jquery" class="skills__card__img">
+                    <div class="skills__card__text">JQUERY</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/gulp.png" alt="gulp" class="skills__card__img">
+                    <div class="skills__card__text">GULP.JS</div>>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/webpack.png" alt="webpack" class="skills__card__img">
+                    <div class="skills__card__text">WEBPACK</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/npm.png" alt="npm" class="skills__card__img">
+                    <div class="skills__card__text">NPM</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/git.png" alt="git" class="skills__card__img">
+                    <div class="skills__card__text">GIT</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/laravel.png" alt="laravel" class="skills__card__img">
+                    <div class="skills__card__text">LARAVEL</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/docker.png" alt="docker" class="skills__card__img">
+                    <div class="skills__card__text">DOCKER</div>
+                </div>
+                <div class="skills__card">
+                    <img src="./img/xampp.png" alt="xampp" class="skills__card__img">
+                    <div class="skills__card__text">XAMPP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2 class="text-center mb-5">Portfolio</h2>
+        <div class="container-lg">
+            <div class="row portfolio">
+                <div class="col-md-6 h-100">
+                    <figure class="portfolio__card">
+                        <img class="portfolio__card__image" src="./img/paramakines-logo.png" alt="para-makines-image">
+                        <figcaption class="portfolio__card__figcaption">
+                            <h1 class="portfolio__card__figcaption__title">Investment App</h1>
+                            <a class="portfolio__card__figcaption__button" href="http://keremozsari.com/pm2/" target="_blank">Review</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-6 h-100">
+                    <figure class="portfolio__card portfolio__card--white">
+                        <img class="portfolio__card__image" src="./img/json.png" alt="json-image">
+                        <figcaption class="portfolio__card__figcaption">
+                            <h1 class="portfolio__card__figcaption__title">JSON-API Processing</h1>
+                            <a class="portfolio__card__figcaption__button" href="javascript:;" target="_blank">Review</a>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="portfolio__more">
+                    <a class="portfolio__more__button" href="https://github.com/keremozsari" type="button" target="_blank">
+                        <i class="fab fa-wpexplorer"></i>
+                        See More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</body>
-</html>
+</div>
+@@include('./footer.html')

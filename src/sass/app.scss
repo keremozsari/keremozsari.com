@@ -1,0 +1,1300 @@
+/***************************** Variables *****************************/
+
+// Media Breakpoint Variables
+$breakpoint-mobil : 375px;
+$breakpoint-mobilX : 480px;
+$breakpoint-tab-mob : 600px;
+$breakpoint-tablet : 768px;
+$breakpoint-tabletX : 992px;
+$breakpoint-desktop : 1200px;
+$breakpoint-desktopX : 1480px;
+// Media Breakpoint Variables End
+
+// Color Variables
+$softBlack: rgba(0,0,0,.5);
+$softBlackHover: rgba(0,0,0,.7);
+$white: #fff;
+$yellow: #e9d856;
+$dark: #252423;
+$vanilla: #F6F4F2;
+$darkPurple: #141c3a;
+$purple: #6d10ff;
+// Color Variables End
+
+/***************************** Variables End *****************************/
+
+/***************************** Core ******************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@media screen and(max-width: 991px){
+  .border-top-md{
+    border-top: 1px solid #f3f3f3;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .border-right-lg{
+    border-right: 1px solid #f3f3f3;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+section{
+  margin: 0;
+  min-height: 100vh;
+}
+
+#homePage{
+}
+
+#about{
+  background: linear-gradient(84deg, #f6f4f2, #f0dbc7, #f6f4f2);
+  background-size: 600% 600%;
+  -webkit-animation: backgroundAnimation 11s ease infinite;
+  -moz-animation: backgroundAnimation 11s ease infinite;
+  animation: backgroundAnimation 11s ease infinite;
+}
+@-webkit-keyframes backgroundAnimation {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@-moz-keyframes backgroundAnimation {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+@keyframes backgroundAnimation {
+  0%{background-position:0% 55%}
+  50%{background-position:100% 46%}
+  100%{background-position:0% 55%}
+}
+
+#skills{
+  position: relative;
+}
+
+#portfolio{
+  background: linear-gradient(84deg, #f6f4f2, #f0dbc7, #f6f4f2);
+  background-size: 600% 600%;
+  -webkit-animation: backgroundAnimation 11s ease infinite;
+  -moz-animation: backgroundAnimation 11s ease infinite;
+  animation: backgroundAnimation 11s ease infinite;
+}
+
+#footer{
+  background: $dark;
+}
+
+#about, #portfolio, #skills{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/***************************** Core End *****************************/
+
+/***************************** Header Scss *****************************/
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255,255,255, .6);
+  z-index: 5;
+}
+
+.header__item{
+  padding: 0 20px;
+
+  &__link{
+    color: $white;
+    transition: color .6s;
+    &:hover{
+      color: $white;
+    }
+    &.active{
+      color: $dark !important;
+    }
+  }
+}
+
+/***************************** Header Scss End *****************************/
+
+/***************************** Homepage Description Scss *****************************/
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: $yellow;
+    border: 0px solid #ddd;
+    opacity: 0;
+    top: -35px;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: $yellow;
+    opacity: 1;
+    top: 20px;
+  }
+  65% {
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    top: -10px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: $yellow;
+    border: 0px solid #222;
+    top: 14px;
+  }
+}
+@keyframes popIn2 {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: $yellow;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: $yellow;
+    opacity: 1;
+    top: -35px;
+  }
+  65% {
+    height: 7px;
+    bottom: 0px;
+    width: 20px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    top: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: $yellow;
+    border: 0px solid #222;
+    top: 14px;
+  }
+}
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.homepage{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  &__left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    z-index: -999;
+    &__video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+  }
+  &__desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    left: 30%;
+    background: $dark;
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      &__title {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 90px;
+        &__block {
+          width: 0%;
+          height: inherit;
+          background: #ffb510;
+          position: absolute;
+          animation: mainBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+          animation-delay: .5s;
+          display: flex;
+        }
+        &__text {
+          font-family: 'Roboto', sans-serif;
+          color: $white;
+          font-size: 72px;
+          -webkit-animation: mainFadeIn 2s forwards;
+          -o-animation: mainFadeIn 2s forwards;
+          animation: mainFadeIn 2s forwards;
+          animation-delay: 1.5s;
+          opacity: 0;
+          display: flex;
+          align-items: baseline;
+          position: relative;
+          .popIn {
+            width: 0px;
+            height: 0px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: $yellow;
+            -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation-delay: 3.2s;
+            margin-left: 5px;
+            margin-top: -10px;
+            position: absolute;
+            top: 14px;
+            right: 184px;
+          }
+          .popIn2 {
+            width: 0px;
+            height: 0px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: $yellow;
+            -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation: popIn2 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation-delay: 3.2s;
+            margin-left: 5px;
+            margin-top: -10px;
+            position: absolute;
+            top: 14px;
+            right: 169px;
+          }
+        }
+      }
+      &__role {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin-top: -10px;
+        &__block {
+          width: 0%;
+          height: inherit;
+          background: #e91e63;
+          position: absolute;
+          animation: secBlock 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+          animation-delay: 2s;
+          display: flex;
+        }
+        &__text {
+          animation: secFadeIn 2s forwards;
+          animation-delay: 3s;
+          opacity: 0;
+          font-weight: 400;
+          font-family: 'Roboto', sans-serif;
+          color: $white;
+          font-size: 21px;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+        }
+      }
+    }
+  }
+  &__right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    z-index: -999;
+    &__video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+    }
+  }
+}
+
+
+/***************************** Homepage Description Scss End *****************************/
+
+/***************************** About Me Scss *****************************/
+
+.about{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: rgba(255,255,255, .5);
+  border-radius: .5rem;
+  padding: 20px;
+  display: flex;
+  &__content{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 20px;
+    border-radius: .5rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    &__title{
+      color: $dark;
+      font-size: 1.2rem;
+    }
+    &__text{
+      color: $softBlack;
+      font-size: 1rem;
+    }
+  }
+  &__image{
+    width: 50%;
+    height: 400px;
+
+    &__img{
+      width: 80%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      filter: drop-shadow(2px 4px 6px black);
+    }
+  }
+}
+
+/***************************** About Me Scss End *****************************/
+
+/***************************** Skills End Scss *****************************/
+
+.video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999;
+  background: black;
+  &__play{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+}
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(255,255,255,.5);
+  border-radius: 0.5rem;
+  &__card{
+    width: 140px;
+    height: 75px;
+    margin: 50px 10px;
+    position: relative;
+    padding: 0.5em;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 0px 15px 0 rgba(0,0,0,0.1);
+    cursor: pointer;
+    &__img{
+      object-fit: contain;
+      object-position: center;
+      filter: grayscale(100%);
+      position: absolute;
+      top: 0%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+    &__text{
+      height: 100%;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+      word-break: break-word;
+      text-transform: uppercase;
+      color: #fff;
+      transition: opacity 350ms;
+      font-size: 1rem;
+    }
+    &:hover::before{
+      background: $white;
+    }
+    &:hover::after{
+      opacity: 0;
+    }
+    &:hover &__img {
+      filter: grayscale(0%);
+    }
+    &:hover &__text{
+      opacity: 0;
+    }
+    &::before,
+    &::after{
+      content: '';
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 200%;
+      display: block;
+      position: absolute;
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      z-index: -1;
+    }
+    &::before{
+      background: #fff;
+      transform: scale(1.055);
+    }
+    &::after{
+      background: #111111;
+      opacity: 0.7;
+      transition: opacity 350ms;
+      -webkit-transition: opacity 350ms;
+    }
+  }
+}
+
+/***************************** Skills End Scss *****************************/
+
+/***************************** Portfolio Scss *****************************/
+
+.portfolio{
+  margin: 0;
+  padding: 0;
+  &__card{
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 250px;
+    background-color: rgba(30, 82, 52, .8);
+    &--white{
+      background-color: $white;
+    }
+    &--transparent{
+      background-color: transparent;
+    }
+    &__image{
+      transform: scale(1);
+      transition: .25s ease-in-out;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      &--cover{
+        object-fit: cover;
+      }
+    }
+    &__figcaption{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: .3rem 2.5rem;
+      color: $white;
+      background-color: $darkPurple;
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: .45s ease-in-out;
+      &__title{
+        color: $white;
+        font-size: 1.3rem;
+        margin-bottom: 1.8rem;
+        font-weight: bold;
+        text-align: center;
+      }
+      &__button{
+        background-color: transparent;
+        border: 2px solid $purple;
+        border-radius: 1rem;
+        padding: .5rem 2rem;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        color: $white;
+        transition: all .2s ease-in-out;
+        &:hover{
+          background-color: $purple;
+          color: $white;
+        }
+      }
+    }
+    &:hover &__figcaption{
+      opacity: 1;
+    }
+  }
+  &__more{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    &__button{
+      background-color: transparent;
+      border: 2px solid $purple;
+      border-radius: 18% 88% 56% 77% / 55% 81% 99% 134%;
+      padding: .5rem 2rem;
+      font-size: 1.2rem;
+      margin: 0 auto;
+      color: $purple;
+      transition: all .2s ease-in-out;
+      &:hover{
+        background-color: $purple;
+        color: $white;
+      }
+    }
+  }
+}
+
+/***************************** Portfolio End Scss *****************************/
+
+/***************************** Footer Scss *****************************/
+
+footer{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: $white;
+}
+
+.social{
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  &__item{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 5px;
+    &__link{
+      position: relative;
+      width: 5rem;
+      height: 5rem;
+      line-height: 48px;
+      background: #000;
+      text-transform: uppercase;
+      font-size: 20px;
+      letter-spacing: 4px;
+      text-decoration: none;
+      animation: animate 50s linear infinite;
+      transition: 0.5s;
+      background: linear-gradient(45deg, $purple, $white, $dark, $yellow, $vanilla,
+              $purple, $white, $dark, $yellow, $vanilla);
+      background-size: 400%;
+      &:hover::before,
+      &:hover::after{
+        opacity: 1;
+      }
+      &:hover span{
+        color: rgba(255,255,255,1);
+        -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.5s;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(10px);
+        opacity: 0;
+      }
+      span{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        top: 1px;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        text-align: center;
+        background: #0c0c0c;
+        color: rgba(255,255,255,0.2);
+        transition: 0.5s;
+        z-index: 1;
+        &::before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50%;
+          background: rgba(255,255,255,0.1);
+        }
+      }
+    }
+  }
+}
+@keyframes animate
+{
+  0%{ background-position: 0 0; }
+
+  50%{ background-position: 300% 0; }
+
+  100%{ background-position: 0 0; }
+}
+
+/***************************** Footer End Scss *****************************/
+
+/***************************** Media Query Scss *****************************/
+
+@media screen and(max-width: $breakpoint-desktopX){}
+
+@media screen and(max-width: $breakpoint-desktop){
+
+  html{
+    font-size: 15px;
+  }
+
+  /***************************** Homepage Description Scss *****************************/
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: $yellow;
+      border: 0px solid #ddd;
+      opacity: 0;
+      top: -35px;
+    }
+    50% {
+      width: 7px;
+      height: 7px;
+      background: $yellow;
+      opacity: 1;
+      top: 20px;
+    }
+    65% {
+      height: 5px;
+      bottom: 0px;
+      width: 10px;
+    }
+    80% {
+      width: 7px;
+      height: 10px;
+      top: -10px;
+    }
+    100% {
+      width: 5px;
+      height: 5px;
+      background: $yellow;
+      border: 0px solid #222;
+      top: 14px;
+    }
+  }
+  @keyframes popIn2 {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: $yellow;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 7px;
+      height: 7px;
+      background: $yellow;
+      opacity: 1;
+      top: -35px;
+    }
+    65% {
+      height: 5px;
+      bottom: 0px;
+      width: 15px;
+    }
+    80% {
+      width: 7px;
+      height: 7px;
+      top: 20px;
+    }
+    100% {
+      width: 5px;
+      height: 5px;
+      background: $yellow;
+      border: 0px solid #222;
+      top: 14px;
+    }
+  }
+  .homepage{
+    &__desc {
+      &__content {
+        &__title {
+          height: 50px;
+          &__text {
+            font-size: 46px;
+            .popIn {
+              margin-top: -15px;
+              right: 117px;
+            }
+            .popIn2 {
+              margin-top: -15px;
+              right: 110px;
+            }
+          }
+        }
+        &__role {
+          height: 40px;
+          &__text {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+  }
+  /***************************** Homepage Description Scss End *****************************/
+
+  /***************************** Skills End Scss *****************************/
+
+  .skills{
+    &__card{
+      width: 120px;
+      height: 60px;
+    }
+  }
+
+  /***************************** Skills End Scss *****************************/
+}
+
+@media screen and(max-width: $breakpoint-tabletX) {
+
+  html {
+    font-size: 14px;
+  }
+
+  /***************************** Homepage Description Scss *****************************/
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: $yellow;
+      border: 0px solid #ddd;
+      opacity: 0;
+      top: -35px;
+    }
+    50% {
+      width: 7px;
+      height: 7px;
+      background: $yellow;
+      opacity: 1;
+      top: 20px;
+    }
+    65% {
+      height: 5px;
+      bottom: 0px;
+      width: 10px;
+    }
+    80% {
+      width: 7px;
+      height: 10px;
+      top: -10px;
+    }
+    100% {
+      width: 5px;
+      height: 5px;
+      background: $yellow;
+      border: 0px solid #222;
+      top: 14px;
+    }
+  }
+  @keyframes popIn2 {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: $yellow;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 7px;
+      height: 7px;
+      background: $yellow;
+      opacity: 1;
+      top: -35px;
+    }
+    65% {
+      height: 5px;
+      bottom: 0px;
+      width: 15px;
+    }
+    80% {
+      width: 7px;
+      height: 7px;
+      top: 20px;
+    }
+    100% {
+      width: 5px;
+      height: 5px;
+      background: $yellow;
+      border: 0px solid #222;
+      top: 14px;
+    }
+  }
+  .homepage {
+    &__desc {
+      &__content {
+        &__title {
+          height: 45px;
+
+          &__text {
+            font-size: 36px;
+
+            .popIn {
+              right: 91px;
+            }
+
+            .popIn2 {
+              right: 84px;
+            }
+          }
+        }
+
+        &__role {
+          height: 35px;
+
+          &__text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  /***************************** Homepage Description Scss End *****************************/
+
+  /***************************** About Me Scss *****************************/
+  .about{
+    &__image{
+      height: 330px;
+    }
+  }
+  /***************************** About Me Scss End *****************************/
+
+  /***************************** Skills End Scss *****************************/
+
+  .skills{
+    &__card{
+      margin: 30px 10px;
+      width: 110px;
+      height: 55px;
+    }
+  }
+
+  /***************************** Skills End Scss *****************************/
+
+}
+@media screen and(max-width: $breakpoint-tablet){
+
+  html{
+    font-size: 13px;
+  }
+
+  /***************************** Homepage Description Scss *****************************/
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: $yellow;
+      border: 0px solid #ddd;
+      opacity: 0;
+      top: -35px;
+    }
+    50% {
+      width: 6px;
+      height: 6px;
+      background: $yellow;
+      opacity: 1;
+      top: 20px;
+    }
+    65% {
+      height: 4px;
+      bottom: 0px;
+      width: 8px;
+    }
+    80% {
+      width: 6px;
+      height: 10px;
+      top: -10px;
+    }
+    100% {
+      width: 4px;
+      height: 4px;
+      background: $yellow;
+      border: 0px solid #222;
+      top: 14px;
+    }
+  }
+  @keyframes popIn2 {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: $yellow;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 6px;
+      height: 6px;
+      background: $yellow;
+      opacity: 1;
+      top: -35px;
+    }
+    65% {
+      height: 4px;
+      bottom: 0px;
+      width: 12px;
+    }
+    80% {
+      width: 6px;
+      height: 6px;
+      top: 20px;
+    }
+    100% {
+      width: 4px;
+      height: 4px;
+      background: $yellow;
+      border: 0px solid #222;
+      top: 14px;
+    }
+  }
+  .homepage{
+    &__desc {
+      &__content {
+        &__title {
+          height: 40px;
+          &__text {
+            font-size: 35px;
+            .popIn {
+              right: 89px;
+            }
+            .popIn2 {
+              right: 82px;
+            }
+          }
+        }
+        &__role {
+          height: 35px;
+          &__text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  /***************************** Homepage Description Scss End *****************************/
+  /***************************** About Me Scss *****************************/
+  .about{
+    &__image{
+      height: 260px;
+    }
+  }
+  /***************************** About Me Scss End *****************************/
+
+  /***************************** Portfolio Scss *****************************/
+
+  .portfolio{
+    &__card{
+      height: 230px;
+    }
+  }
+
+  /***************************** Portfolio End Scss *****************************/
+
+}
+@media screen and(max-width: $breakpoint-tab-mob){
+
+  html{
+    font-size: 12.5px;
+  }
+
+  /***************************** Homepage Description Scss *****************************/
+  .homepage{
+    &__left{
+      width: 50%;
+    }
+    &__desc {
+      width: 100%;
+      left: 0;
+      border-left: 0;
+      border-right: 0;
+      background-color: rgba(0,0,0, .5);
+      &__content {
+        &__title {
+          height: 45px;
+          &__text {
+            font-size: 45px;
+            .popIn {
+              right: 114px;
+            }
+            .popIn2 {
+              right: 107px;
+            }
+          }
+        }
+        &__role {
+          height: 40px;
+          &__text {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    &__right{
+      width: 50%;
+      border-left: 1px solid #fff;
+      &__video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+      }
+    }
+  }
+  /***************************** Homepage Description Scss End *****************************/
+  /***************************** About Me Scss *****************************/
+  .about{
+    flex-direction: column-reverse;
+    &__content{
+      width: 100%;
+      margin-top: 20px;
+    }
+    &__image{
+      margin-left: auto;
+      margin-right: auto;
+      height: 260px;
+      width: 75%;
+    }
+  }
+  /***************************** About Me Scss End *****************************/
+
+  /***************************** Skills End Scss *****************************/
+
+  .skills{
+    &__card{
+      margin: 30px 5px;
+      width: 90px;
+      height: 45px;
+    }
+  }
+
+  /***************************** Skills End Scss *****************************/
+
+  /***************************** Portfolio Scss *****************************/
+
+  .portfolio{
+    &__card{
+      height: 200px;
+    }
+  }
+
+  /***************************** Portfolio End Scss *****************************/
+
+
+}
+@media screen and(max-width: $breakpoint-mobilX){
+  html{
+    font-size: 12px;
+  }
+  /***************************** About Me Scss *****************************/
+  .about{
+    &__image{
+      height: 200px;
+    }
+  }
+  /***************************** About Me Scss End *****************************/
+
+  /***************************** Skills End Scss *****************************/
+
+  .skills{
+    padding: 10px;
+    &__card{
+      margin: 30px 3px;
+      width: 75px;
+      height: 37.5px;
+    }
+  }
+
+  /***************************** Skills End Scss *****************************/
+
+  /***************************** Portfolio Scss *****************************/
+
+  .portfolio{
+    &__card{
+      height: 150px;
+    }
+  }
+
+  /***************************** Portfolio End Scss *****************************/
+}
+@media screen and(max-width: $breakpoint-mobil){
+  html{
+    font-size: 11px;
+  }
+
+  /***************************** Homepage Description Scss *****************************/
+  .homepage{
+    &__desc {
+      &__content {
+        &__title {
+          height: 40px;
+          &__text {
+            font-size: 35px;
+            .popIn {
+              right: 89px;
+            }
+            .popIn2 {
+              right: 83px;
+            }
+          }
+        }
+        &__role {
+          height: 35px;
+          &__text {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  /***************************** Homepage Description Scss End *****************************/
+  /***************************** About Me Scss *****************************/
+  .about{
+    &__image{
+      height: 170px;
+      width: 80%;
+    }
+  }
+  /***************************** About Me Scss End *****************************/
+
+  /***************************** Skills End Scss *****************************/
+
+  .skills{
+    padding: 0;
+    &__card{
+      margin: 25px 5px;
+      width: 65px;
+      height: 32.5px;
+    }
+  }
+
+  /***************************** Skills End Scss *****************************/
+
+  /***************************** Portfolio Scss *****************************/
+
+  .portfolio{
+    &__card{
+      height: 130px;
+    }
+  }
+
+  /***************************** Portfolio End Scss *****************************/
+}
+
+/***************************** Media Query End Scss *****************************/
