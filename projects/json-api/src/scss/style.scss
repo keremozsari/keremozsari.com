@@ -1,0 +1,469 @@
+/***************************** Variables *****************************/
+
+// Media Breakpoint Variables
+$breakpoint-mobil : 320px;
+$breakpoint-mobilX : 480px;
+$breakpoint-tablet : 768px;
+$breakpoint-tabletX : 992px;
+$breakpoint-desktop : 1024px;
+$breakpoint-desktopX : 1200px;
+// Media Breakpoint Variables End
+
+// Components
+$border: 1px solid #8599A8;
+$borderPagination: 1px solid #D6DCE3;
+// Components End
+
+// Color Variables
+$black: #191B2C;
+$gray: #8599A8;
+$blue: #748EFC;
+$buttonBlue: #748EFC 0% 0% no-repeat padding-box;
+$linearBlueBg: transparent linear-gradient(90deg, #748EFC 0%, #3B4D9A 100%) 0% 0% no-repeat padding-box;
+$blackBg: #040404 0% 0% no-repeat padding-box;
+$white: #fff;
+$grayBg: #F9F9FB 0% 0% no-repeat padding-box;
+// Color Variables End
+
+/***************************** Variables End *****************************/
+
+/***************************** Core ******************************/
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: $grayBg;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: $breakpoint-tablet) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: $breakpoint-tabletX) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: $breakpoint-desktopX) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  margin-top: 30px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 25px #00000008;
+}
+
+.none {
+  display: none;
+}
+
+.grid-1 {
+
+  grid-template-columns: auto !important;
+}
+
+.visible {
+  visibility: hidden;
+}
+
+/***************************** Core End *****************************/
+
+/***************************** Header Scss *****************************/
+
+.header{
+  background: $linearBlueBg;
+  width: 100%;
+  height: 110px;
+  &__title{
+    color: #fff;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+/***************************** Header Scss End *****************************/
+
+/***************************** Main List Scss *****************************/
+
+.members{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  margin-top: 10px;
+  &__text{
+    color: $black;
+    font-weight: bold;
+  }
+  &__create{
+  display: block;
+    &__button {
+      border: $border;
+      border-radius: 5px;
+      color: $gray;
+      padding: 10px 40px;
+      cursor: pointer;
+      &:hover{
+        opacity: .7;
+      }
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  transition: all 1s ease;
+  &__item {
+      background-color: $white;
+      padding: 50px 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0px 10px 25px #00000008;
+      &__image{
+        &__img{
+          width: 115px;
+          height: 115px;
+          border-radius: 50%;
+          box-shadow: 0px 10px 20px #00000029;
+        }
+      }
+
+      &__information{
+        padding: 15px 0;
+        &__name{
+          color: $black;
+          font-size: 1.5rem;
+          padding: 5px;
+        }
+        &__mail{
+          color: $gray;
+          font-size: 1.1rem;
+          padding: 5px;
+        }
+    }
+
+    &__review {
+      width: 170px;
+      padding: 20px 0;
+      margin-left: auto;
+      margin-right: auto;
+      &__button {
+        border: $border;
+        background-color: $white;
+        border-radius: 5px;
+        color: $gray;
+        padding: 10px 40px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        &:hover{
+          background: $linearBlueBg;
+          box-shadow: 0px 5px 20px #748EFC80;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
+  &__item{
+   display: flex;
+  }
+  &__prev,
+  &__item span,
+  &__next {
+    width: 55px;
+    height: 55px;
+    border: $borderPagination;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: $gray;
+    cursor: pointer;
+    padding: 25px;
+  }
+  &__item span.active{
+    background: $buttonBlue;
+    color: $white;
+  }
+}
+
+/***************************** Main List Scss End *****************************/
+
+/***************************** Main Create Scss End *****************************/
+
+.create{
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 10px;
+  &__text {
+    color: $black;
+    font-weight: bold;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  &__inputs {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: $border;
+    border-radius: 5px;
+  }
+
+  &__button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid $blue;
+    background: $buttonBlue;
+    color: $white;
+    box-shadow: 0px 5px 20px #748EFC80;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+    &:hover{
+      color: $gray;
+      background-color: $white;
+      border: $border;
+      box-shadow: none;
+    }
+  }
+}
+
+.alert--success{
+  display: none;
+  width: 300px;
+  height: 50px;
+  background-color: #42ba96;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.6rem;
+  animation: alert 5s ease;
+  position: absolute;
+  top: 0;
+  right: -350px;
+}
+
+.alert--error{
+  display: none;
+  width: 300px;
+  height: 50px;
+  background-color: #ff9494;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.6rem;
+  animation: alert 5s ease;
+  position: absolute;
+  top: 0;
+  right: -350px;
+}
+
+@keyframes alert {
+  0%{right: -350px}
+  10%{right: 0}
+  20%{right: 0}
+  30%{right: 0}
+  40%{right: 0}
+  50%{right: 0}
+  60%{right: 0}
+  70%{right: 0}
+  80%{right: 0}
+  90%{right: 0}
+  100%{right: -350px}
+}
+
+/***************************** Main Create Scss End *****************************/
+
+/***************************** Footer Scss  *****************************/
+
+.footer {
+  width: 100%;
+  height: 75px;
+  background-color: $black;
+  &__copyright {
+    color: $gray;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/***************************** Footer Scss End *****************************/
+
+/****************************** Media Breakpoint Scss *****************************/
+
+@media screen and (max-width: $breakpoint-tabletX){
+  html{
+    font-size: 13px;
+  }
+  .card{
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  /* Main Create Scss */
+
+  .alert--success,
+  .alert--error {
+    width: 250px;
+  }
+
+  /* Main Create Scss End */
+}
+
+@media screen and (max-width: $breakpoint-tablet){
+  html{
+    font-size: 12px;
+  }
+
+  .header{
+    height: 80px;
+  }
+
+  .card{
+    grid-template-columns: auto auto;
+    &__item{
+      padding: 40px 15px;
+      &__image{
+        &__img{
+          width: 85px;
+          height: 85px;
+        }
+      }
+    }
+  }
+
+  .pagination{
+    &__prev,
+    &__item span,
+    &__next {
+      width: 45px;
+      height: 45px;
+      padding: 20px;
+    }
+  }
+
+  /* Main Create Scss */
+
+  .alert--success,
+  .alert--error {
+    width: 220px;
+  }
+
+  /* Main Create Scss End */
+
+}
+
+@media screen and (max-width: $breakpoint-mobilX){
+  html{
+    font-size: 11px;
+  }
+
+  .header{
+    height: 60px;
+  }
+
+  .card{
+    grid-template-columns: auto;
+  }
+
+  .members{
+    padding: 25px 0;
+    margin-top: 5px;
+    &__create{
+      &__button {
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  .pagination{
+    &__prev,
+    &__item span,
+    &__next {
+      width: 40px;
+      height: 40px;
+      padding: 15px;
+    }
+  }
+
+  /* Main Create Scss  */
+
+  .form{
+    width: 250px;
+  }
+
+  .alert--success,
+  .alert--error {
+    width: 170px;
+    height: 45px;
+  }
+
+  /* Main Create Scss End */
+
+}
+
+/***************************** Media Breakpoint Scss End *****************************/
+
+
+
+
+
