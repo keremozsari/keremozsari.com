@@ -1,7 +1,7 @@
 ### Used Technologies
 ***
 * **HTML 5**
-* **CSS 3**
+* **SCSS**
     * *BEM*
 * **BOOTSTRAP 4**
 * **JAVASCRIPT**
